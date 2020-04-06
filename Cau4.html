@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả lớp hình tròn</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="300"></canvas>
+<script>
+    let Circle = function (x,y,radius,color) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.render = function () {
+            let canvas = document.getElementById("myCanvas");
+            let context = canvas.getContext("2d");
+            context.fillStyle = this.color;
+            context.beginPath();
+            context.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            context.fillStyle = this.color;
+            context.fill();
+            context.stroke();
+        }
+    };
+    let hinhtron = new Circle(10,10,100,"#000000");
+    hinhtron.render();
+</script>
+</body>
+</html>
