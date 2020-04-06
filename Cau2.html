@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tryRemoveFromArray</title>
+</head>
+<body>
+<script>
+    function tryRemoteFromArray(mang,n) {
+        for(i=0;i<mang.length;i++){
+            if(n === mang[i]){
+                mang.splice(i,1);
+            }
+        }
+        return mang;
+    }
+    let arr = [3,4,8,16,21,15,19];
+    document.write(arr+"<br/>");
+    n = parseInt(prompt("Mời nhập giá trị số nguyên"));
+    tryRemoteFromArray(arr,n);
+    document.write(arr);
+</script>
+</body>
+</html>
